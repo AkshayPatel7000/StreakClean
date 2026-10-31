@@ -11,6 +11,7 @@ import { SwipeArenaScreen } from './src/screens/SwipeArenaScreen';
 import { BatchReviewScreen } from './src/screens/BatchReviewScreen';
 import { CelebrationScreen } from './src/screens/CelebrationScreen';
 import { ProfileScreen } from './src/screens/ProfileScreen';
+import { PrivacyPolicyScreen } from './src/screens/PrivacyPolicyScreen';
 import { RootStackParamList } from './src/types/navigation';
 import { Palette } from './src/theme/colors';
 import { useGameStore } from './src/store/useGameStore';
@@ -78,6 +79,13 @@ export default function App() {
             <Stack.Screen
               name="Profile"
               component={ProfileScreen}
+              options={{
+                animation: 'slide_from_right',
+              }}
+            />
+            <Stack.Screen
+              name="PrivacyPolicy"
+              component={PrivacyPolicyScreen}
               options={{
                 animation: 'slide_from_right',
               }}

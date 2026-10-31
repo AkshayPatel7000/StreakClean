@@ -95,3 +95,36 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+---
+
+## 🔒 Privacy Policy & Google Play Store Submission
+
+Streak Clean is designed with a **100% On-Device & Zero Uploads** architecture.
+- Full text Markdown policy: [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md)
+- In-app WebView screen: [`PrivacyPolicyScreen.tsx`](src/screens/PrivacyPolicyScreen.tsx)
+- Optional GitHub Pages HTML: [`docs/privacy-policy.html`](docs/privacy-policy.html)
+
+### Option A: Hosting via Google Sites (Rendered in App WebView)
+1. Go to [Google Sites](https://sites.google.com/) and create a new blank site (e.g. named `Streak Clean - Privacy Policy`).
+2. Copy and paste the privacy policy text from [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md).
+3. Click **Publish** and set the web address (e.g. `streakclean-privacy`).
+4. Ensure access is set to **Public** so anyone on the internet can view it.
+5. In [`src/screens/PrivacyPolicyScreen.tsx`](src/screens/PrivacyPolicyScreen.tsx#L32), set your URL:
+   ```ts
+   export const PRIVACY_POLICY_URL = 'https://sites.google.com/view/your-site-name';
+   ```
+6. The app renders this page inside a native `WebView` with full reloading, offline fallback, and browser-open actions.
+7. Paste this URL into **Google Play Console** under:
+   `Policy and programs > App content > Privacy policy`.
+
+### Option B: Hosting via GitHub Pages
+1. Push this repository to GitHub (`AkshayPatel7000/StreakClean`).
+2. Go to **Settings > Pages** on your GitHub repository.
+3. Under **Build and deployment > Source**, select **Deploy from a branch**.
+4. Choose Branch: `main` (or default branch) and Folder: `/docs`.
+5. Click **Save**. Your public URL will be live at:
+   ```
+   https://<your-username>.github.io/StreakClean/privacy-policy.html
+   ```
+

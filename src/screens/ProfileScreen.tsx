@@ -31,6 +31,7 @@ import {
   Image as ImageIcon,
   Layers,
   LockKeyhole,
+  ShieldCheck,
   Shuffle,
   SlidersHorizontal,
   Trash2,
@@ -514,7 +515,21 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({ onBack }) => {
               <ChevronRight size={18} color={Palette.muted} strokeWidth={2.4} />
             </Pressable>
 
-            {/* Setting 5: Clear App Cache */}
+            {/* Setting 5: Privacy Policy */}
+            <Pressable
+              onPress={() => {
+                HapticService.selection();
+                navigation.navigate('PrivacyPolicy');
+              }}
+              style={styles.settingRow}
+            >
+              <ShieldCheck size={20} color={Palette.secondary} strokeWidth={2.2} />
+              <Text style={styles.settingLabel}>Privacy policy</Text>
+              <Text style={styles.settingDetail}>100% on-device</Text>
+              <ChevronRight size={18} color={Palette.muted} strokeWidth={2.4} />
+            </Pressable>
+
+            {/* Setting 6: Clear App Cache */}
             <Pressable
               onPress={handleClearCache}
               style={[styles.settingRow, styles.settingRowLast]}

@@ -3,6 +3,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -156,6 +157,21 @@ export const PermissionsScreen: React.FC<PermissionsScreenProps> = ({ onContinue
             You can change permissions anytime in settings
           </Text>
         </View>
+
+        <TouchableOpacity
+          onPress={() => {
+            HapticService.selection();
+            navigation.navigate('PrivacyPolicy');
+          }}
+          style={styles.privacyLinkRow}
+          activeOpacity={0.7}
+          accessibilityRole="button"
+          accessibilityLabel="Read Privacy Policy"
+        >
+          <Text style={styles.privacyLinkText}>
+            Read our <Text style={styles.privacyLinkHighlight}>Privacy Policy</Text>
+          </Text>
+        </TouchableOpacity>
       </View>
     </ScreenContainer>
   );
@@ -315,5 +331,21 @@ const styles = StyleSheet.create({
   },
   demoButton: {
     marginTop: 8,
+  },
+  privacyLinkRow: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 8,
+    marginTop: 4,
+  },
+  privacyLinkText: {
+    color: Palette.muted,
+    fontSize: 11.5,
+    fontWeight: '500',
+  },
+  privacyLinkHighlight: {
+    color: Palette.primary,
+    fontWeight: '700',
+    textDecorationLine: 'underline',
   },
 });

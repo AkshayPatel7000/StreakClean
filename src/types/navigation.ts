@@ -15,6 +15,7 @@ export type RootStackParamList = {
     deletedCount: number;
   };
   Profile: undefined;
+  PrivacyPolicy: undefined;
 };
 
 export type RootStackNavigationProp<T extends keyof RootStackParamList> =

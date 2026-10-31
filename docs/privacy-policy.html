@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Streak Clean</title>
+  <meta name="description" content="Privacy Policy for Streak Clean (com.streakclean) Android Application. 100% on-device photo cleaning with zero cloud uploads." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0A0D14;
+      --bg-surface: #121722;
+      --bg-surface-elevated: #181F2E;
+      --border-subtle: #222B3D;
+      --border-accent: #34425A;
+      --primary: #6366F1;
+      --primary-glow: rgba(99, 102, 241, 0.25);
+      --success: #10B981;
+      --success-glow: rgba(16, 185, 129, 0.2);
+      --warning: #F59E0B;
+      --danger: #F43F5E;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-faint: #64748B;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 96px 24px;
+    }
+
+    /* Header & Branding */
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 32px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-glow);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #A5B4FC;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .badge-pill .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 10px var(--success);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .app-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    .app-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .app-meta code {
+      font-family: var(--font-mono);
+      background: var(--bg-surface-elevated);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      border: 1px solid var(--border-subtle);
+      color: #CBD5E1;
+    }
+
+    /* Core Guarantee Box */
+    .guarantee-card {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.12), rgba(18, 23, 34, 0.95));
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .guarantee-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .shield-icon {
+      width: 32px;
+      height: 32px;
+      color: var(--success);
+      flex-shrink: 0;
+    }
+
+    .guarantee-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .guarantee-card p {
+      color: #CBD5E1;
+      font-size: 0.98rem;
+    }
+
+    /* Content Styling */
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .section-num {
+      color: var(--primary);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      background: rgba(99, 102, 241, 0.15);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li strong {
+      color: var(--text-main);
+    }
+
+    /* Permissions Table/Cards */
+    .permissions-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .permission-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 20px;
+      transition: border-color 0.2s ease;
+    }
+
+    .permission-item:hover {
+      border-color: var(--border-accent);
+    }
+
+    .permission-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .permission-code {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #E2E8F0;
+      background: var(--bg-surface-elevated);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .permission-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #A5B4FC;
+    }
+
+    .permission-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Highlights callout */
+    .callout {
+      background: var(--bg-surface);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Contact box */
+    .contact-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 10px;
+      color: #818CF8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 8px 18px;
+      background: var(--bg-surface-elevated);
+      border-radius: 8px;
+      border: 1px solid var(--border-accent);
+      transition: all 0.2s ease;
+    }
+
+    .contact-email:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 28px 16px 64px 16px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .app-meta {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge-pill">
+        <span class="dot"></span> 100% On-Device Privacy
+      </div>
+      <h1>Privacy Policy</h1>
+      <div class="app-meta">
+        <span><strong>Application:</strong> Streak Clean</span>
+        <span><strong>Package ID:</strong> <code>com.streakclean</code></span>
+        <span><strong>Last Updated:</strong> October 31, 2026</span>
+      </div>
+    </header>
+
+    <!-- Guarantee Banner -->
+    <div class="guarantee-card">
+      <div class="guarantee-header">
+        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span class="guarantee-title">Our Zero-Upload Commitment</span>
+      </div>
+      <p>
+        <strong>Streak Clean does not collect, transmit, store, or sell any of your photos, videos, or personal data.</strong> All photo scanning, deck creation, swipe interactions, and file deletions happen <strong>100% locally on your device</strong>. Your photos never leave your phone.
+      </p>
+    </div>
+
+    <section>
+      <h2><span class="section-num">01</span> Introduction</h2>
+      <p>
+        Welcome to <strong>Streak Clean</strong> (referred to herein as "we", "our", or the "Application"). We respect your privacy and are committed to protecting it. This Privacy Policy discloses our information practices and explains how our mobile application handles device access, permissions, and user data in accordance with the <strong>Google Play Developer Distribution Agreement</strong> and <strong>Google Play User Data Policies</strong>.
+      </p>
+      <p>
+        By installing or using Streak Clean, you acknowledge and agree to the practices described in this policy.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="section-num">02</span> Device Permissions & What We Access</h2>
+      <p>
+        To perform its core photo management and gamified cleaning features, Streak Clean requests specific Android system permissions. Here is a transparent breakdown of each permission and its exact purpose:
+      </p>
+
+      <div class="permissions-grid">
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.READ_MEDIA_IMAGES</span>
+            <span class="permission-tag">Android 13+</span>
+          </div>
+          <div class="permission-desc">
+            Enables the app to query and display your local photos within the swipe deck. Photos are loaded directly from your device's local storage and are <strong>never</strong> transmitted over the network.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.READ_EXTERNAL_STORAGE</span>
+            <span class="permission-tag">Android 12 and below</span>
+          </div>
+          <div class="permission-desc">
+            Provides backward compatibility on older Android versions to inspect local camera roll photos for local cleaning.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.WRITE_EXTERNAL_STORAGE</span>
+            <span class="permission-tag">Photo Deletion</span>
+          </div>
+          <div class="permission-desc">
+            Required on supported Android versions to move photos marked for removal to your device's trash or delete them upon your explicit confirmation during the Batch Review step.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.ACCESS_MEDIA_LOCATION</span>
+            <span class="permission-tag">EXIF Metadata</span>
+          </div>
+          <div class="permission-desc">
+            Permits reading embedded local EXIF metadata (such as timestamps and photo details) strictly on your device to organize photo cards by date and size. Location data is never transmitted, logged, or shared.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.POST_NOTIFICATIONS</span>
+            <span class="permission-tag">Optional Alerts</span>
+          </div>
+          <div class="permission-desc">
+            Allows Streak Clean to send local reminders configured by you (e.g. daily streak reminders). These notifications are generated locally by the operating system—no remote push notification tokens or server connections are involved.
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.INTERNET</span>
+            <span class="permission-tag">Network Access</span>
+          </div>
+          <div class="permission-desc">
+            Used strictly to load remote vector avatar illustrations (DiceBear API) and to open external web links (such as this Privacy Policy or support pages) when triggered by you. <strong>No photo data or personal analytics are ever sent over this connection.</strong>
+          </div>
+        </div>
+
+        <div class="permission-item">
+          <div class="permission-header">
+            <span class="permission-code">android.permission.VIBRATE & RECEIVE_BOOT_COMPLETED</span>
+            <span class="permission-tag">System Utilities</span>
+          </div>
+          <div class="permission-desc">
+            Provides tactile haptic feedback during swipe gestures and reschedules your local streak notification alarms if your device reboots.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="section-num">03</span> Information Collection & Third-Party SDKs</h2>
+      <div class="callout">
+        <p><strong>Zero Third-Party Trackers:</strong> Streak Clean does not integrate any third-party advertising SDKs, marketing trackers, or behavior profiling networks.</p>
+      </div>
+      <ul>
+        <li><strong>No Personal Accounts:</strong> Streak Clean does not require account creation, registration, email sign-up, or social logins.</li>
+        <li><strong>No Advertising Networks:</strong> We do not show third-party ads (no Google AdMob, Unity, AppLovin, Facebook Audience Network, or similar).</li>
+        <li><strong>No Analytics Tracking:</strong> We do not track your clicks, screen views, or swipe habits via third-party analytics services (e.g. Google Analytics, Firebase, Mixpanel).</li>
+        <li><strong>Local Game Progression:</strong> Your streak counter, level progress, unlocked badges, fruit persona, and total freed storage count are stored strictly on your device using encrypted/local key-value storage (MMKV).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-num">04</span> Photo Deletion & User Control</h2>
+      <p>
+        You have absolute control over which photos are kept or deleted:
+      </p>
+      <ul>
+        <li>Swiping left merely stages a photo for review; no files are deleted until you inspect the <strong>Batch Review</strong> summary.</li>
+        <li>When you confirm deletion, Streak Clean invokes Android's standard <code>MediaStore</code> trash/delete API. Depending on your Android version and manufacturer settings, deleted media is typically placed into the system Gallery Trash/Bin for 30 days before permanent deletion.</li>
+        <li>Streak Clean does not maintain backups, copies, or shadow archives of any deleted photos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-num">05</span> Data Retention & Storage</h2>
+      <p>
+        Because all application state (preferences, streaks, XP) is stored locally on your device:
+      </p>
+      <ul>
+        <li>Clearing the app's cache or data through your Android system settings instantly removes all stored preferences.</li>
+        <li>Uninstalling Streak Clean permanently erases all locally saved game metrics and settings.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-num">06</span> Children's Privacy (COPPA)</h2>
+      <p>
+        Streak Clean does not knowingly collect, request, or solicit any personal information from children under the age of 13 (or 16 in the European Economic Area). The app is a general utility tool designed for cleaning photo galleries. If you believe any minor has provided personal information to us, please contact us immediately so we can address your concerns.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="section-num">07</span> Security</h2>
+      <p>
+        The security of your memories is our highest priority. By deliberately choosing an <strong>offline-first, zero-upload architecture</strong>, we eliminate the security risks associated with cloud data breaches, interceptable network transmissions, and remote database vulnerabilities. Your photos remain under your physical device control at all times.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="section-num">08</span> Your Legal Rights (GDPR & CCPA/CPRA)</h2>
+      <p>
+        Under regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA):
+      </p>
+      <ul>
+        <li><strong>Right to Access & Portability:</strong> Since we do not host or store your data on any server, your data is already in your complete custody on your device.</li>
+        <li><strong>Right to Deletion:</strong> You can purge all app records at any moment by clearing the application storage or uninstalling the app.</li>
+        <li><strong>No Sale of Personal Information:</strong> We do not sell, rent, or trade your personal information to third parties.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="section-num">09</span> Changes to This Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in our practices or Android platform guidelines. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.
+      </p>
+    </section>
+
+    <div class="contact-card">
+      <h3>Questions or Inquiries?</h3>
+      <p>
+        If you have any questions, feedback, or concerns regarding this Privacy Policy or your data privacy, feel free to contact us at:
+      </p>
+      <a class="contact-email" href="mailto:support@streakclean.app">support@streakclean.app</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Streak Clean. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
