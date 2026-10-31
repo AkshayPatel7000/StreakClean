@@ -89,7 +89,7 @@ export const PermissionsScreen: React.FC<PermissionsScreenProps> = ({ onContinue
             Your memories{'\n'}never leave.
           </Text>
           <Text style={styles.leadText}>
-            SwipeClean works entirely on your phone. Zero uploads, zero accounts, zero compromises.
+            Streak Clean works entirely on your phone. Zero uploads, zero accounts, zero compromises.
           </Text>
 
           {/* 100% On-device badge */}

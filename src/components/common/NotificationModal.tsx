@@ -78,10 +78,12 @@ export const NotificationModal: React.FC<NotificationModalProps> = ({
       if (!granted) {
         Alert.alert(
           'Notification Permission Required',
-          'SwipeClean needs notification permission to send your streak reminders. Please enable notifications in device settings.',
+          'Streak Clean needs notification permission to send your streak reminders. Please enable notifications in device settings.',
           [{ text: 'Understood' }]
         );
       }
+    } else {
+      await NotificationService.cancelDailyReminder();
     }
   };
 

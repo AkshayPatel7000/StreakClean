@@ -1,4 +1,5 @@
 import { PermissionsAndroid, Platform } from 'react-native';
+import notifee from '@notifee/react-native';
 
 export interface PermissionStatus {
   photoLibrary: boolean;
@@ -28,9 +29,9 @@ export const PermissionService = {
           const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES,
             {
-              title: 'SwipeClean Photo Access',
+              title: 'Streak Clean Photo Access',
               message:
-                'SwipeClean needs access to your photos to help you review and declutter your camera roll on-device.',
+                'Streak Clean needs access to your photos to help you review and declutter your camera roll on-device.',
               buttonNeutral: 'Ask Me Later',
               buttonNegative: 'Cancel',
               buttonPositive: 'OK',
@@ -41,9 +42,9 @@ export const PermissionService = {
           const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
             {
-              title: 'SwipeClean Storage Access',
+              title: 'Streak Clean Storage Access',
               message:
-                'SwipeClean needs access to your local storage to find and organize photos.',
+                'Streak Clean needs access to your local storage to find and organize photos.',
               buttonNeutral: 'Ask Me Later',
               buttonNegative: 'Cancel',
               buttonPositive: 'OK',
@@ -60,44 +61,54 @@ export const PermissionService = {
   },
 
   async checkNotificationPermission(): Promise<boolean> {
-    if (Platform.OS === 'android' && Platform.Version >= 33) {
-      try {
-        const postNotification =
-          (PermissionsAndroid.PERMISSIONS as Record<string, string>)
-            .POST_NOTIFICATIONS || 'android.permission.POST_NOTIFICATIONS';
-        return await PermissionsAndroid.check(postNotification as any);
-      } catch (error) {
-        console.warn('Error checking notification permission:', error);
-        return false;
+    try {
+      const settings = await notifee.getNotificationSettings();
+      return settings.authorizationStatus >= 1;
+    } catch {
+      if (Platform.OS === 'android' && Platform.Version >= 33) {
+        try {
+          const postNotification =
+            (PermissionsAndroid.PERMISSIONS as Record<string, string>)
+              .POST_NOTIFICATIONS || 'android.permission.POST_NOTIFICATIONS';
+          return await PermissionsAndroid.check(postNotification as any);
+        } catch (error) {
+          console.warn('Error checking notification permission:', error);
+          return false;
+        }
       }
+      return true;
     }
-    return true;
   },
 
   async requestNotificationPermission(): Promise<boolean> {
-    if (Platform.OS === 'android' && Platform.Version >= 33) {
-      try {
-        const postNotification =
-          (PermissionsAndroid.PERMISSIONS as Record<string, string>)
-            .POST_NOTIFICATIONS || 'android.permission.POST_NOTIFICATIONS';
-        const granted = await PermissionsAndroid.request(
-          postNotification as any,
-          {
-            title: 'Streak Reminder Notifications',
-            message:
-              'Receive a quick reminder before your 24-hour cleaning streak resets.',
-            buttonNeutral: 'Later',
-            buttonNegative: 'Don’t Allow',
-            buttonPositive: 'Allow',
-          }
-        );
-        return granted === PermissionsAndroid.RESULTS.GRANTED;
-      } catch (error) {
-        console.warn('Error requesting notification permission:', error);
-        return false;
+    try {
+      const settings = await notifee.requestPermission();
+      return settings.authorizationStatus >= 1;
+    } catch {
+      if (Platform.OS === 'android' && Platform.Version >= 33) {
+        try {
+          const postNotification =
+            (PermissionsAndroid.PERMISSIONS as Record<string, string>)
+              .POST_NOTIFICATIONS || 'android.permission.POST_NOTIFICATIONS';
+          const granted = await PermissionsAndroid.request(
+            postNotification as any,
+            {
+              title: 'Streak Clean Notifications',
+              message:
+                'Receive a daily reminder before your 24-hour cleaning streak resets.',
+              buttonNeutral: 'Later',
+              buttonNegative: 'Don’t Allow',
+              buttonPositive: 'Allow',
+            }
+          );
+          return granted === PermissionsAndroid.RESULTS.GRANTED;
+        } catch (error) {
+          console.warn('Error requesting notification permission:', error);
+          return false;
+        }
       }
+      return true;
     }
-    return true;
   },
 
   async requestAllPermissions(): Promise<PermissionStatus> {

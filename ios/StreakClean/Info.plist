@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>PhotoCleanerApp</string>
+	<string>Streak Clean</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -35,11 +35,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>SwipeClean needs access to your photo library to let you swipe, review, and clean up local photos.</string>
+	<string>Streak Clean needs access to your photo library to let you swipe, review, and clean up local photos.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>SwipeClean needs photo library access to organize and manage your device photos.</string>
+	<string>Streak Clean needs photo library access to organize and manage your device photos.</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

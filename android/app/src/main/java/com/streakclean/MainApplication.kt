@@ -1,4 +1,4 @@
-package com.photocleanerapp
+package com.streakclean
 
 import android.app.Application
 import com.facebook.react.PackageList
